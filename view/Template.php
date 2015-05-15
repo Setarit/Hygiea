@@ -50,6 +50,6 @@ class Template {
     }
 
     public function render() {
-        include ($this->_autoLoader->getTemplate());
+        include ($this->_autoLoader->getLayout());
     }
 }
