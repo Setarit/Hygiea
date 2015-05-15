@@ -13,9 +13,8 @@ class Template {
     private $_userNavigation;
     private $_pageContent;
     
-    function __construct($autoLoader, $_pageName) {
+    function __construct($autoLoader) {
         $this->_autoLoader = $autoLoader;
-        $this->_pageName = $_pageName;
     }
 
     function getPageName() {

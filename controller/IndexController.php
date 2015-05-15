@@ -4,13 +4,13 @@
  *
  * @author javalsoft
  */
-class IndexController {
+class IndexController extends BaseController{
     
-    function __construct() {
-        
+    function __construct($autoLoader) {
+        parent::__construct($autoLoader);
     }
     
     public function index() {
-        
+        var_dump($this);
     }
 }

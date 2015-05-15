@@ -13,6 +13,7 @@ class AutoLoader {
     
     function __construct() {
         $this->_rootDirectory = str_replace("helpers", "", __DIR__);
+        require_once (self::CONTROLLER_DIR.'BaseController.php');
     }
     
     public function loadController($controllerName) {

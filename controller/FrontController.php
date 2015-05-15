@@ -43,7 +43,11 @@ class FrontController {
         }
         //load the files
         $this->_autoLoader->loadController($this->_controller);
+        
         //invoke
-        call_user_func_array(array(new $this->_controller, $this->_method), $this->_params);
+        $reflectedClass = new ReflectionClass($this->_controller);
+        $newInstance = $reflectedClass->newInstance($this->_autoLoader);//pass the autoloader
+        $methodToInvoke = $reflectedClass->getMethod($this->_method);
+        $methodToInvoke->invoke($newInstance, $this->_params);
     }
 }
