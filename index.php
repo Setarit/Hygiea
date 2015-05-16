@@ -3,5 +3,8 @@
     $autoLoader = new AutoLoader();
     require_once 'controller/FrontController.php';
     require_once 'view/Template.php';
-    $frontController = new FrontController($autoLoader);
+    require_once 'controller/CacheController.php';
+    $cacheController = new CacheController();
+    
+    $frontController = new FrontController($autoLoader, $cacheController);
     $frontController->run();

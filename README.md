@@ -2,6 +2,10 @@
 Hygiea is another simple PHP framework.
 The framework implements the Front controller pattern and uses reflection to create the right constructor.
 
+## Required packages
+The framework requires the PHP APC package, which can be installed by executing:
+`sudo apt-get install php-apc`.
+
 ## Directory structure
 The framework consists of four major direcories:
 * controller: contains all the controllers

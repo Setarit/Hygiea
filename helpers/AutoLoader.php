@@ -47,4 +47,8 @@ class AutoLoader {
     public function getDatabaseConfigFile() {
         return $this->_rootDirectory.self::DATABASE_DIR."database.json";
     }
+    
+    public function loadDatabaseConnection() {
+        require_once (self::DATABASE_DIR.'DatabaseConnection.php');
+    }
 }
