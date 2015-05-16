@@ -11,6 +11,7 @@ class IndexController extends BaseController{
     }
     
     public function index() {
-        var_dump($this);
+        $this->_template->setPageName("Hygiea");
+        $this->_template->render();
     }
 }

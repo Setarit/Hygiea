@@ -8,6 +8,7 @@ class AutoLoader {
     const CONTROLLER_DIR = "controller/";
     const VIEW_DIR = "view/";
     const TEMPLATES_DIR = "view/templates/";
+    const DATABASE_DIR = "database/";
     
     private $_rootDirectory;
     
@@ -38,5 +39,12 @@ class AutoLoader {
      */
     public function getLayout(){
         return $this->_rootDirectory.self::TEMPLATES_DIR."DefaultLayout.php";
+    }
+    
+    /**
+     * @return string The location of the configuration file
+     */
+    public function getDatabaseConfigFile() {
+        return $this->_rootDirectory.self::DATABASE_DIR."database.json";
     }
 }
