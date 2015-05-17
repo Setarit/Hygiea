@@ -9,6 +9,7 @@ class AutoLoader {
     const VIEW_DIR = "view/";
     const TEMPLATES_DIR = "view/templates/";
     const DATABASE_DIR = "database/";
+    const DATABASE_FACTORY_DIR = "database/factory/";
     
     private $_rootDirectory;
     
@@ -50,5 +51,9 @@ class AutoLoader {
     
     public function loadDatabaseConnection() {
         require_once (self::DATABASE_DIR.'DatabaseConnection.php');
+    }
+    
+    public function loadDatabaseFactory(){
+        require_once(self::DATABASE_FACTORY_DIR.'Factory.php');
     }
 }

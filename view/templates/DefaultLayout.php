@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
+        <link rel="icon" type="image/png" href="web/favico.png">
+        
         <link rel="stylesheet" href="web/bootstrap/css/bootstrap.css" type="text/css"/>
         <link rel="stylesheet" href="web/bootstrap/css/local.css" type="text/css"/>
 

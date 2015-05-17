@@ -6,9 +6,10 @@
  * @author javalsoft
  */
 class DatabaseConnection {
-    private $_connection;
+    private $_connection;    
     
     public function __construct($autoLoader) {
+        $autoLoader->loadDatabaseFactory();
         $configuration = json_decode(file_get_contents($autoLoader->getDatabaseConfigFile()));
         $this->_processVendor($configuration->vendor);
     }
@@ -17,5 +18,6 @@ class DatabaseConnection {
         if(strlen($vendorName) === 0){
             throw new Exception("No vendor specified in the database.json file");
         }
+        
     }
 }
