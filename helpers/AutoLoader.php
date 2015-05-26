@@ -56,4 +56,8 @@ class AutoLoader {
     public function loadDatabaseFactory(){
         require_once(self::DATABASE_FACTORY_DIR.'Factory.php');
     }
+    
+    public function getUrlCreator($databaseVendor){
+        require_once(self::DATABASE_FACTORY_DIR.$databaseVendor.'UrlCreator.php');
+    }
 }

@@ -18,10 +18,10 @@ class DatabaseConnection {
         $this->_username = $configuration->username; 
         $this->_port = $configuration->port;
         $this->_database = $configuration->database;
-        $this->_processVendor($configuration->vendor);
+        $this->_processVendor($configuration->vendor, $autoLoader);
     }
     
-    private function _processVendor($vendorName){
-        $this->_connection = Factory::createFromVendor($vendorName, $this->_url, $this->_username, $this->_password, $this->_database, $this->_port);
+    private function _processVendor($vendorName, $autoLoader){
+        $this->_connection = Factory::createFromVendor($autoLoader, $vendorName, $this->_url, $this->_username, $this->_password, $this->_database, $this->_port);
     }
 }

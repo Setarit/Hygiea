@@ -2,9 +2,9 @@
 Hygiea is another simple PHP framework.
 The framework implements the Front controller pattern and uses reflection to create the right constructor.
 
+Hygiea has out-of-the box support for MongoDb!
+
 ## Required packages
-* The framework requires the PHP APC package, which can be installed by executing:
-`sudo apt-get install php-apc`.
 * Mongo package, installable with `sudo pecl install mongo`. **Do not forget to update your `php.ini` file**. More info [here](http://php.net/manual/en/mongo.installation.php).
 
 ## Directory structure
